@@ -11,7 +11,7 @@ Se encuentran con formato string y se trabajan en formato string no es necesario
 
 http://localhost:3000/api/astronomy/landings
 http://localhost:3000/api/astronomy/neas
-http://localhost:3000/api/users 
+http://localhost:3000/api/user
 
 Puede usar create, edit y delete tal como se pide en el ejercicio,
 (https://github.com/TheBridge-FullStackDeveloper/fs-ft-sev-sep22-syllabus/blob/main/teoria/back/ejercicioNasa.md).
