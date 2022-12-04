@@ -3,6 +3,7 @@ const nea = require('./routes/nea')
 const user = require('./routes/user')
 const express = require('express')
 const app = express()
+require('dotenv').config()
 
 require('./db')()
 
