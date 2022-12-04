@@ -5,9 +5,7 @@ console.log(require('../models/user'))
 
 router.get('/', async (req,res) =>{
 
-    if(!Object.keys(req.query).length) {
-        const result = await User.find({})
-        res.send(result)
+if (!Object.keys(req.query).length){ return res.status(400).send("campo sin valor")
     }else if (req.query.email) {
 
         const result = await User.find({email: req.query.email } )

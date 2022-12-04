@@ -17,7 +17,7 @@ app.get('/ping', (req, res) => {
     res.send('pong')
 })
 
-
+const port = process.env.PORT || 3000
 app.listen(3000, () => {
-    console.log("Server on 3000");
+    console.log(`http://localhost:${port}`);
 })
