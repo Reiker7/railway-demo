@@ -25,3 +25,4 @@
 8. Exponer el servicio en un dominio generado por la plataforma  movies.up.railway.app↗
 9. Comprobar logs
 10. Comprobar que el servicio está funcionando en la url pública https://movies.up.railway.app/genres
+
