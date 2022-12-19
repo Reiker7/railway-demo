@@ -27,6 +27,13 @@ router.get('/', async (req, res) => {
     }
 
 })
+router.get('/landings', async (req, res) => {
+ if (req) {
+        const result = await Landing.find({  })
+            
+        res.send(result)
+    } 
+})
 router.get('/mass/:mass', async (req, res) => {
 
     const result = await Landing.find({ "$expr": { "$eq": [{ "$toDecimal": "$mass" }, +req.params.mass] } })
