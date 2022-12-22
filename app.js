@@ -5,6 +5,9 @@ const nea = require('./routes/nea')
 const user = require('./routes/user')
 const express = require('express')
 const app = express()
+const cors = require('cors')
+app.use(cors())
+
 const router = express.Router()
 require('dotenv').config()
 

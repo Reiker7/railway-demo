@@ -20,8 +20,8 @@ router.post('/create/', async (req, res) => {
     const user = new User(req.body)
     console.log(user)
     const newUser = await user.save()
-
-    res.send(newUser)
+console.log(newUser)
+    res.send('hola')
 })
 
 router.put('/edit/:email', async (req, res) => {
