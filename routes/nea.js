@@ -31,7 +31,7 @@ router.get('/', async (req,res) =>{
     } 
 })
 
-router.post('/', async (req, res) => {
+router.post('/create/', async (req, res) => {
     const nea = new Nea(req.body)
     console.log(nea)
     const newNea = await nea.save()
@@ -39,13 +39,13 @@ router.post('/', async (req, res) => {
     res.send(newNea)
 })
 
-router.put('/:designat', async (req, res) => {
+router.put('/edit/:designat', async (req, res) => {
     const result = await Nea.findOneAndUpdate({designation: `(${req.params.designat})`}, req.body)
 
     res.send(result)
 })
 
-router.delete('/:designat', async (req, res) => {
+router.delete('/delete/:designat', async (req, res) => {
     const result = await Nea.findOneAndDelete({ designation: `(${req.params.designat})` })
 
     res.send(result)

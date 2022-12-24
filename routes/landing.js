@@ -52,7 +52,7 @@ router.get('/class/:class', async (req, res) => {
 })
 
 
-router.post('/', async (req, res) => {
+router.post('/create/', async (req, res) => {
     const landing = new Landing(req.body)
     console.log(landing)
     const newLanding = await landing.save()
@@ -60,13 +60,13 @@ router.post('/', async (req, res) => {
     res.send(newLanding)
 })
 
-router.put('/:id', async (req, res) => {
+router.put('/edit/:id', async (req, res) => {
     const landing = await Landing.findOneAndUpdate({ id: req.params.id }, req.body)
     console.log(req.params.id)
     res.send(landing)
 })
 
-router.delete('/:id', async (req, res) => {
+router.delete('/delete/:id', async (req, res) => {
     const landing = await Landing.findOneAndDelete({ id: req.params.id })
 
     res.send(landing)
